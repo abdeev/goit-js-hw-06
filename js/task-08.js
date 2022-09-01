@@ -21,7 +21,9 @@ function onFormElSubmit(event) {
     } = event.currentTarget;
     if ( (email.value === '') || (password.value === '') ) {
         alert("You forgot to enter something in the fields 🤓")
+        return;
     }
+    
     const userData = { email: email.value, password: password.value };
     console.log(userData);
     event.currentTarget.reset();
